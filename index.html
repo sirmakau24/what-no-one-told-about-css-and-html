@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Foundations Playground</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER with NAVIGATION -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo" tabindex="0"></a>
+        <img src="favicon.png" alt="Logo" class="logo-img" style="height: 32px; vertical-align: middle; margin-right: 10px;">
+        Frontend Foundations Playground
+      </a>
+      <nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <ul id="nav-links" class="nav-links" hidden>
+          <li><a href="#html-basics">HTML Basics</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#semantic-html">Semantic HTML</a></li>
+          <li><a href="#css-basics">CSS Basics</a></li>
+          <li><a href="#layouts">Layouts</a></li>
+          <li><a href="#responsive-design">Responsive Design</a></li>
+          <li><a href="#positioning-animations">Positioning & Animations</a></li>
+        </ul>
+      </nav>
+      <button id="mode-toggle" aria-label="Toggle light/dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HTML BASICS SECTION -->
+    <section id="html-basics" class="card section">
+      <h2>HTML Basics</h2>
+      <p>Common HTML tags and their usage:</p>
+
+      <h3>Headings</h3>
+      <div class="headings-demo"></div>
+      <h1 class="gradient-text">Heading 1</h1>
+      <h2 class="gradient-text">Heading 2</h2>
+      <h3 class="gradient-text">Heading 3</h3>
+      <h4 class="gradient-text">Heading 4</h4>
+      <h5 class="gradient-text">Heading 5</h5>
+      <h6 class="gradient-text">Heading 6</h6>
+      </div>
+
+      <h3>Text Formatting</h3>
+      <p>This is <strong>strong</strong>, <em>emphasized</em>, <u>underlined</u>, <mark>highlighted</mark>, <small>small</small>, <del>deleted</del>, and <ins>inserted</ins> text.</p>
+
+      <h3>Lists</h3>
+      <ol>
+      <li>Ordered list item</li>
+      <li>Another item</li>
+      </ol>
+      <ul>
+      <li>Unordered list item</li>
+      <li>Another item</li>
+      </ul>
+      <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+      </dl>
+
+      <h3>Links & Images</h3>
+      <p>
+      Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML Docs</a>.
+      </p>
+      <img src="https://via.placeholder.com/250x150?text=HTML+Diagram" alt="HTML Diagram Placeholder" class="diagram" />
+
+      <h3>Tables</h3>
+      <table>
+      <caption>Sample Table</caption>
+      <thead>
+        <tr>
+        <th>Name</th>
+        <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>Jane</td>
+        <td>Developer</td>
+        </tr>
+        <tr>
+        <td>John</td>
+        <td>Designer</td>
+        </tr>
+      </tbody>
+      </table>
+
+      <h3>Blockquote & Code</h3>
+      <blockquote cite="https://www.w3.org/">
+      "HTML is the standard markup language for documents designed to be displayed in a web browser."
+      </blockquote>
+      <pre><code>&lt;div&gt;Some code here&lt;/div&gt;</code></pre>
+
+      <h3>Other Tags</h3>
+      <p>
+      <abbr title="HyperText Markup Language">HTML</abbr>,
+      <time datetime="2024-06-01">June 1, 2024</time>,
+      <progress value="70" max="100"></progress>
+      </p>
+
+      <div class="code-container">
+      <pre id="html-code" class="code-example">
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;p&gt;This is &lt;strong&gt;strong&lt;/strong&gt;, &lt;em&gt;emphasized&lt;/em&gt;, &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Ordered item&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Unordered item&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;a href="https://developer.mozilla.org"&gt;MDN&lt;/a&gt;
+  &lt;img src="diagram.png" alt="Diagram" /&gt;
+  &lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Role&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Jane&lt;/td&gt;&lt;td&gt;Developer&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;blockquote&gt;Quote here&lt;/blockquote&gt;
+  &lt;code&gt;&lt;div&gt;Some code here&lt;/div&gt;&lt;/code&gt;
+  &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+  &lt;time datetime="2024-06-01"&gt;June 1, 2024&lt;/time&gt;
+  &lt;progress value="70" max="100"&gt;&lt;/progress&gt;
+      </pre>
+      </div>
+    </section></pre></blockquote>
+
+
+
+    <!-- FORMS SECTION -->
+    <section id="forms" class="card section">
+      <h2>Forms</h2>
+      <p>Example form with various input types and validation:</p>
+      <form id="example-form" novalidate>
+      <label for="name">Name <span aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+      <label for="password">Password <span aria-hidden="true">*</span></label>
+      <input type="password" id="password" name="password" placeholder="At least 6 characters" pattern=".{6,}" required />
+
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <label><input type="checkbox" name="interests" value="coding" /> Coding</label>
+        <label><input type="checkbox" name="interests" value="design" /> Design</label>
+        <label><input type="checkbox" name="interests" value="music" /> Music</label>
+      </fieldset>
+
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option value="kenya">Kenya</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="4"></textarea>
+
+      <button type="submit" class="btn-submit">Submit</button>
+      </form>
+
+      <h3>Related Concepts</h3>
+      <ul>
+      <li><strong>Form validation</strong> (required, pattern, type)</li>
+      <li><strong>Input types</strong> (<code>text</code>, <code>email</code>, <code>password</code>, <code>radio</code>, <code>checkbox</code>, <code>select</code>, <code>textarea</code>)</li>
+      <li><strong>Labels and accessibility</strong> (<code>&lt;label&gt;</code> with <code>for</code> attribute)</li>
+      <li><strong>Grouping fields</strong> (<code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>)</li>
+      <li><strong>Button types</strong> (<code>submit</code>, <code>reset</code>)</li>
+      </ul>
+
+      <h3>Form Elements Code Examples</h3>
+      <div class="code-container">
+      <pre class="code-example">
+  &lt;form&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required /&gt;
+
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required /&gt;
+
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required pattern=".{6,}" /&gt;
+
+    &lt;fieldset&gt;
+    &lt;legend&gt;Gender&lt;/legend&gt;
+    &lt;input type="radio" name="gender" value="male" required /&gt; Male
+    &lt;input type="radio" name="gender" value="female" /&gt; Female
+    &lt;input type="radio" name="gender" value="other" /&gt; Other
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+    &lt;legend&gt;Interests&lt;/legend&gt;
+    &lt;input type="checkbox" name="interests" value="coding" /&gt; Coding
+    &lt;input type="checkbox" name="interests" value="design" /&gt; Design
+    &lt;input type="checkbox" name="interests" value="music" /&gt; Music
+    &lt;/fieldset&gt;
+
+    &lt;label for="country"&gt;Country&lt;/label&gt;
+    &lt;select id="country" name="country" required&gt;
+    &lt;option value="" disabled selected&gt;Select your country&lt;/option&gt;
+    &lt;option value="kenya"&gt;Kenya&lt;/option&gt;
+    &lt;option value="uk"&gt;UK&lt;/option&gt;
+    &lt;option value="canada"&gt;Canada&lt;/option&gt;
+    &lt;option value="australia"&gt;Australia&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+      </pre>
+      </div>
+    </section>
+
+
+
+
+    <!-- SEMANTIC HTML SECTION -->
+    <section id="semantic-html" class="card section">
+      <h2>Semantic HTML</h2>
+      <p>Semantic HTML uses meaningful tags to describe the structure and purpose of content, improving accessibility and SEO.</p>
+
+      <h3>Common Semantic Tags</h3>
+      <ul>
+      <li><code>&lt;header&gt;</code>: Introductory content or navigation links</li>
+      <li><code>&lt;nav&gt;</code>: Navigation links</li>
+      <li><code>&lt;main&gt;</code>: Main content of the document</li>
+      <li><code>&lt;section&gt;</code>: Thematic grouping of content</li>
+      <li><code>&lt;article&gt;</code>: Self-contained composition (e.g., blog post)</li>
+      <li><code>&lt;aside&gt;</code>: Content related to the main content (e.g., sidebar)</li>
+      <li><code>&lt;footer&gt;</code>: Footer for a section or page</li>
+      <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: Media and its caption</li>
+      <li><code>&lt;mark&gt;</code>: Highlighted text</li>
+      <li><code>&lt;time&gt;</code>: Date/time value</li>
+      </ul>
+
+      <h3>Mini Blog Example</h3>
+      <section class="mini-blog">
+      <header>
+        <h3>My First Blog Post</h3>
+        <p><time datetime="2024-06-01">June 1, 2024</time></p>
+      </header>
+      <article>
+        <p>This is an example article showing how semantic HTML tags help organize content meaningfully. <mark>Semantic tags</mark> improve accessibility and SEO.</p>
+        <figure>
+        <img src="https://via.placeholder.com/200x100?text=Blog+Image" alt="Blog Example Image" />
+        <figcaption>Figure 1: Example blog image using <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>.</figcaption>
+        </figure>
+      </article>
+      <aside>
+        <h4>About Me</h4>
+        <p>I am a frontend developer learning semantic HTML.</p>
+      </aside>
+      <footer>
+        <p>Posted by <strong>Sirmakau24</strong></p>
+      </footer>
+      </section>
+
+      <h3>Related Concepts</h3>
+      <ul>
+      <li><strong>Accessibility</strong>: Semantic tags help screen readers and assistive technologies.</li>
+      <li><strong>SEO</strong>: Search engines understand page structure better.</li>
+      <li><strong>Maintainability</strong>: Code is easier to read and maintain.</li>
+      <li><strong>Landmarks</strong>: Tags like <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> define page regions.</li>
+      </ul>
+
+      <div class="code-container">
+      <pre id="semantic-code" class="code-example">
+  &lt;section class="mini-blog"&gt;
+    &lt;header&gt;
+    &lt;h3&gt;My First Blog Post&lt;/h3&gt;
+    &lt;p&gt;&lt;time datetime="2024-06-01"&gt;June 1, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;article&gt;
+    &lt;p&gt;This is an example article showing how semantic HTML tags help organize content meaningfully. &lt;mark&gt;Semantic tags&lt;/mark&gt; improve accessibility and SEO.&lt;/p&gt;
+    &lt;figure&gt;
+      &lt;img src="blog-image.png" alt="Blog Example Image" /&gt;
+      &lt;figcaption&gt;Figure 1: Example blog image using &lt;figure&gt; and &lt;figcaption&gt;.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+    &lt;h4&gt;About Me&lt;/h4&gt;
+    &lt;p&gt;I am a frontend developer learning semantic HTML.&lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+    &lt;p&gt;Posted by &lt;strong&gt;Sirmakau24&lt;/strong&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/section&gt;
+      </pre>
+      </div>
+    </section>
+
+
+
+    <!-- . Miscellaneous HTML Section -->
+<section id="misc-html" class="card section">
+  <h2>🎛️ Miscellaneous HTML Elements</h2>
+
+  <!-- Audio -->
+  <h3>Audio Example</h3>
+  <audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Video -->
+  <h3>Video Example</h3>
+  <video width="400" controls poster="thumbnail.jpg">
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+
+  <!-- Iframe -->
+  <h3>Embed (Iframe Example)</h3>
+  <iframe width="420" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+          title="YouTube video demo" frameborder="0" allowfullscreen></iframe>
+
+  <!-- Details & Summary -->
+  <h3>Collapsible Content (Details/Summary)</h3>
+  <details>
+    <summary>Click to reveal a hidden message</summary>
+    <p>🎉 Surprise! You just discovered the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</p>
+  </details>
+
+  <!-- Extra Input Types -->
+  <h3>Extra Form Input Types</h3>
+  <form class="misc-form">
+    <label>Pick a number: <input type="number" min="1" max="10"></label><br>
+    <label>Pick a date: <input type="date"></label><br>
+    <label>Pick a color: <input type="color"></label><br>
+    <label>Range slider: <input type="range" min="0" max="100"></label><br>
+    <label>Upload file: <input type="file"></label>
+  </form>
+
+  <!-- Toggle Button -->
+  <button class="btn small code-toggle" data-target="misc-code">Show Code</button>
+
+  <!-- Code Block -->
+  <pre id="misc-code" class="code-block"><code>&lt;!-- Audio --&gt;
+&lt;audio controls&gt;
+  &lt;source src="sample.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Video --&gt;
+&lt;video width="400" controls poster="thumbnail.jpg"&gt;
+  &lt;source src="sample.mp4" type="video/mp4"&gt;
+  Your browser does not support the video element.
+&lt;/video&gt;
+
+&lt;!-- Iframe --&gt;
+&lt;iframe width="420" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt;&lt;/iframe&gt;
+
+&lt;!-- Details &amp; Summary --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Click to reveal a hidden message&lt;/summary&gt;
+  &lt;p&gt;🎉 Surprise! You just discovered &lt;details&gt;.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;!-- Extra Input Types --&gt;
+&lt;form&gt;
+  &lt;input type="number" min="1" max="10"&gt;
+  &lt;input type="date"&gt;
+  &lt;input type="color"&gt;
+  &lt;input type="range" min="0" max="100"&gt;
+  &lt;input type="file"&gt;
+&lt;/form&gt;
+</code></pre>
+</section>
+
+
+
+
+
+
+
+    <!-- CSS BASICS SECTION -->
+    <section id="css-basics" class="card section">
+      <h2>CSS Basics</h2>
+      <p>Examples of selectors:</p>
+      <ul>
+      <li><code>element</code> selector: <code>p { color: blue; }</code></li>
+      <li><code>.class</code> selector: <code>.highlight { background: yellow; }</code></li>
+      <li><code>#id</code> selector: <code>#unique { font-weight: bold; }</code></li>
+      </ul>
+
+      <div class="box-model-area">
+      <h3>Box Model Demo</h3>
+      <div class="box-model-demo">
+        <div class="box-model-content">Content</div>
+      </div>
+      <p class="box-model-desc">The box model includes <strong>margin</strong>, <strong>border</strong>, <strong>padding</strong>, and <strong>content</strong>. Each part can be styled for spacing and layout.</p>
+      </div>
+
+      <div class="typography-area">
+      <h3>Typography Examples</h3>
+      <p class="font-poppins highlight">This text uses the Poppins font and is highlighted.</p>
+      <p class="font-roboto" id="unique">This text uses the Roboto font and is bold.</p>
+      </div>
+
+      <div class="profile-area">
+      <h3>Profile Card Example</h3>
+      <div class="profile-card">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" />
+        <div class="profile-info">
+        <h3>Jane Doe</h3>
+        <p>Frontend Developer</p>
+        </div>
+      </div>
+      </div>
+
+      <aside class="related-content">
+      <h3>Related Concepts</h3>
+      <ul>
+        <li><strong>Selectors:</strong> Target elements for styling (<code>element</code>, <code>.class</code>, <code>#id</code>)</li>
+        <li><strong>Box Model:</strong> Controls spacing and layout of elements</li>
+        <li><strong>Typography:</strong> Fonts, colors, and text styles for readability</li>
+        <li><strong>Reusable Classes:</strong> Use classes for consistent design</li>
+        <li><strong>Responsive Design:</strong> Make layouts adapt to different screens</li>
+      </ul>
+      </aside>
+
+      <div class="code-container">
+      <pre id="css-code" class="code-example">
+  /* element selector */
+  p {
+    color: blue;
+  }
+
+  /* class selector */
+  .highlight {
+    background: yellow;
+  }
+
+  /* id selector */
+  #unique {
+    font-weight: bold;
+  }
+
+  /* box model example */
+  .box-model-content {
+    margin: 10px;
+    border: 3px solid #333;
+    padding: 15px;
+  }
+      </pre>
+      </div>
+    </section>
+
+
+
+    <!-- LAYOUTS SECTION -->
+    <section id="layouts" class="card section">
+      <h2>Layouts (Flexbox & Grid)</h2>
+
+      <h3>Flexbox Example</h3>
+      <div class="flexbox-container">
+      <div class="flexbox-item">Box 1</div>
+      <div class="flexbox-item">Box 2</div>
+      <div class="flexbox-item">Box 3</div>
+      </div>
+      <ul></ul>
+      <li><strong>Flexbox properties:</strong> <code>display: flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-direction</code>, <code>flex-wrap</code></li>
+      <li><strong>Use cases:</strong> Navigation bars, card layouts, centering content</li>
+      </ul>
+
+      <h3>Grid Example (2x2 Image Gallery)</h3>
+      <div class="grid-container">
+      <img src="https://via.placeholder.com/150?text=1" alt="Gallery image 1" />
+      <img src="https://via.placeholder.com/150?text=2" alt="Gallery image 2" />
+      <img src="https://via.placeholder.com/150?text=3" alt="Gallery image 3" />
+      <img src="https://via.placeholder.com/150?text=4" alt="Gallery image 4" />
+      </div>
+      <ul>
+      <li><strong>Grid properties:</strong> <code>display: grid</code>, <code>grid-template-columns</code>, <code>grid-template-rows</code>, <code>gap</code>, <code>grid-area</code></li>
+      <li><strong>Use cases:</strong> Image galleries, dashboards, complex layouts</li>
+      </ul>
+
+      <h3>Related Concepts</h3>
+      <ul>
+      <li><strong>Responsive layouts:</strong> Use media queries with Flexbox/Grid for mobile-friendly design</li>
+      <li><strong>Alignment & spacing:</strong> <code>justify-content</code>, <code>align-items</code>, <code>gap</code></li>
+      <li><strong>Fallbacks:</strong> Use <code>display: block</code> or <code>inline-block</code> for older browsers</li>
+      </ul>
+
+      <div class="code-container">
+      <pre id="layout-code" class="code-example">
+  /* Flexbox container */
+  .flexbox-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  .flexbox-item {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  /* Grid container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .grid-container img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  /* Responsive example */
+  @media (max-width: 600px) {
+    .flexbox-container {
+    flex-direction: column;
+    }
+    .grid-container {
+    grid-template-columns: 1fr;
+    }
+  }
+      </pre>
+      </div>
+    </section>
+
+
+
+    <!-- RESPONSIVE DESIGN SECTION -->
+    <section id="responsive-design" class="card section">
+      <h2>Responsive Design</h2>
+      <p>Resize the browser window to see background color and navbar style change on small screens.</p>
+      <p>Try toggling the navigation menu on mobile view (hamburger menu not implemented here but navbar changes style).</p>
+
+      <h3>Related Responsive Designs</h3>
+      <ul>
+      <li><strong>Mobile:</strong> Single column layout, larger touch targets, stacked navigation, increased font size.</li>
+      <li><strong>Tablet:</strong> Two-column layout, moderate spacing, horizontal navigation, optimized images.</li>
+      <li><strong>Desktop:</strong> Multi-column layout, sidebar, full navigation bar, larger images.</li>
+      </ul>
+
+      <div class="code-container">
+      <pre id="responsive-code" class="code-example">
+  /* Mobile styles */
+  @media (max-width: 600px) {
+    body {
+    background-color: #f0f8ff;
+    font-size: 1.1em;
+    }
+    nav ul {
+    flex-direction: column;
+    gap: 10px;
+    }
+    .container {
+    padding: 10px;
+    }
+    .card.section {
+    margin: 10px 0;
+    }
+    .profile-card {
+    flex-direction: column;
+    align-items: center;
+    }
+  }
+
+  /* Tablet styles */
+  @media (min-width: 601px) and (max-width: 900px) {
+    body {
+    background-color: #e6f7ff;
+    font-size: 1em;
+    }
+    .container {
+    max-width: 700px;
+    padding: 20px;
+    }
+    .card.section {
+    margin: 20px 0;
+    }
+    .grid-container {
+    grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Desktop styles */
+  @media (min-width: 901px) {
+    body {
+    background-color: #fff;
+    font-size: 1em;
+    }
+    .container {
+    max-width: 1200px;
+    padding: 30px;
+    }
+    .card.section {
+    margin: 30px 0;
+    }
+    .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    }
+  }
+      </pre>
+      </div>
+    </section>
+
+
+
+    <!-- POSITIONING + TRANSITIONS/ANIMATIONS SECTION -->
+    <section id="positioning-animations" class="card section">
+      <h2>Positioning & Transitions/Animations</h2>
+
+      <h3>Positioning Example</h3>
+      <div class="positioning-demo">
+      <div class="relative-box">Relative</div>
+      <div class="absolute-box">Absolute</div>
+      <div class="sticky-box">Sticky (scroll down)</div>
+      </div>
+
+      <h3>Animation Example</h3>
+      <div class="animated-box">🎉</div>
+
+      <button class="btn-transition">Hover me!</button>
+
+      <aside class="related-content">
+      <h3>Related Concepts</h3>
+      <ul>
+        <li><strong>Positioning types:</strong> <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code></li>
+        <li><strong>Transitions:</strong> Smoothly animate property changes (e.g., <code>background-color</code>, <code>transform</code>)</li>
+        <li><strong>Animations:</strong> Use <code>@keyframes</code> for complex effects</li>
+        <li><strong>Z-index:</strong> Controls stacking order of positioned elements</li>
+        <li><strong>Use cases:</strong> Tooltips, modals, sticky headers, animated buttons</li>
+      </ul>
+      </aside>
+
+      <div class="code-container">
+      <pre id="positioning-code" class="code-example">
+  /* Positioning */
+  .relative-box {
+    position: relative;
+  }
+  .absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .sticky-box {
+    position: sticky;
+    top: 0;
+  }
+
+  /* Animation */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  .animated-box {
+    animation: bounce 2s infinite;
+  }
+
+  /* Transition */
+  .btn-transition {
+    transition: all 0.3s ease;
+  }
+  .btn-transition:hover {
+    background-color: #ff4081;
+    color: white;
+    transform: scale(1.1);
+  }
+      </pre>
+      </div>
+    </section>
+    </main>
+    
+    <!-- CSS UNITS DEMO SECTION -->
+    <section class="card section">
+  <h2>🌟 More CSS Essentials</h2>
+  <p>CSS gives us powerful tools to control layouts, colors, and effects. Let’s explore more essentials with examples.</p>
+
+  <!-- 1. CSS Units -->
+  <h3>1. CSS Units</h3>
+  <p>CSS supports <strong>absolute</strong> (px) and <strong>relative</strong> (%, em, rem, vh, vw) units.</p>
+  <div class="units-demo">
+    <p class="px">This text is 20px</p>
+    <p class="em">This text is 2em (relative to parent)</p>
+    <p class="rem">This text is 2rem (relative to root)</p>
+  </div>
+  <button class="btn small code-toggle" data-target="code-units">Show Code</button>
+  <pre id="code-units" class="code-block"><code>
+.units-demo p { margin: 10px 0; }
+.units-demo .px { font-size: 20px; }
+.units-demo .em { font-size: 2em; }
+.units-demo .rem { font-size: 2rem; }
+  </code></pre>
+
+  <!-- 2. Colors & Gradients -->
+  <h3>2. Colors & Gradients</h3>
+  <div class="gradient-demo">
+    <h4>Gradient Background</h4>
+  </div>
+  <button class="btn small code-toggle" data-target="code-gradient">Show Code</button>
+  <pre id="code-gradient" class="code-block"><code>
+.gradient-demo {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+}
+  </code></pre>
+
+  <!-- 3. Z-Index -->
+  <h3>3. Z-Index & Stacking</h3>
+  <div class="zindex-demo">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2 (on top)</div>
+  </div>
+  <button class="btn small code-toggle" data-target="code-zindex">Show Code</button>
+  <pre id="code-zindex" class="code-block"><code>
+.zindex-demo { position: relative; height: 150px; }
+.box {
+  width: 120px; height: 120px;
+  position: absolute; top: 20px; left: 20px;
+  display: flex; justify-content: center; align-items: center;
+  color: white;
+}
+.box1 { background: #e74c3c; z-index: 1; }
+.box2 { background: #2ecc71; left: 60px; z-index: 2; }
+  </code></pre>
+
+  <!-- 4. Overflow -->
+  <h3>4. Overflow</h3>
+  <div class="overflow-demo">
+    <div class="box-overflow">
+      This text is very long and will not fit inside the box. Keep writing and see what happens when it overflows...
+    </div>
+  </div>
+  <button class="btn small code-toggle" data-target="code-overflow">Show Code</button>
+  <pre id="code-overflow" class="code-block"><code>
+.box-overflow {
+  width: 200px; height: 100px;
+  border: 2px solid #333; overflow: auto;
+  padding: 5px;
+}
+  </code></pre>
+
+  <!-- 5. Pseudo-classes -->
+  <h3>5. Pseudo-classes & Pseudo-elements</h3>
+  <a href="#" class="btn pseudo-btn">Hover Me</a>
+  <button class="btn small code-toggle" data-target="code-pseudo">Show Code</button>
+  <pre id="code-pseudo" class="code-block"><code>
+.pseudo-btn {
+  position: relative; padding: 10px 20px;
+  color: white; background: #3498db;
+  border-radius: 5px; overflow: hidden;
+  text-decoration: none; font-weight: bold;
+}
+.pseudo-btn::before {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 0; height: 3px; background: yellow;
+  transition: width 0.3s ease;
+}
+.pseudo-btn:hover::before { width: 100%; }
+  </code></pre>
+
+  <!-- 6. Shadows -->
+  <h3>6. Box & Text Shadows</h3>
+  <div class="shadow-demo">
+    <div class="shadow-box">Card with shadow</div>
+  </div>
+  <button class="btn small code-toggle" data-target="code-shadow">Show Code</button>
+  <pre id="code-shadow" class="code-block"><code>
+.shadow-box {
+  width: 200px; padding: 20px; margin: auto;
+  text-align: center; background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+  </code></pre>
+
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-container">
+      <p>Contact: @Sirmakau24</p>
+      <p>&copy; 2025 HTML & CSS Basics</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/client/main.js"></script>
+</body>
+</html>
